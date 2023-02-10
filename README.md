@@ -20,113 +20,104 @@
 
 
 ## 대회 개요
-
-# All Premier League Matches 2010 ~ 2021
-
-[Learning from Imbalanced Insurance Dataset](https://www.notion.so/Learning-from-Imbalanced-Insurance-Dataset-b662a7b419024054858c0302d281d218)
-
-[Top Hits Spotify from 2000 ~ 2019](https://www.notion.so/Top-Hits-Spotify-from-2000-2019-cbf5fbfcc8bd45428adf87a730179f50)
-
-[Personality Classification Data : 16 Personalities](https://www.notion.so/Personality-Classification-Data-16-Personalities-98746daeabc44b61b665ab0b757ee36a)
-
-[Higher Education Students Performance Evaluation](https://www.notion.so/Higher-Education-Students-Performance-Evaluation-b378067256144dda9dc18c5d272c1b53)
-
-
-> 앱 사용성 데이터를 통한 대출신청 예측분석
-
-- 가명화된 데이터를 기반으로 고객의 대출상품 신청여부 예측
-- (2022년 3~5월 데이터제공 / 2022년 6월 예측)
-- 예측모델을 활용하여 탐색적 데이터 분석 수행
-- 대출신청, 미신청 고객을 분류하여 고객의 특성 분석결과 도출
+ 
+[All Premier League Matches 2010 ~ 2021] <br>
+[Learning from Imbalanced Insurance Dataset] <br>
+[Top Hits Spotify from 2000 ~ 2019] <br>
+[Personality Classification Data : 16 Personalities]98746daeabc44b61b665ab0b757ee36a) <br>
+[Higher Education Students Performance Evaluation] <br>
+위 5개의 데이터셋 중 하나를 택해 자유롭게 분석을 진행
 
 
 ## 대회 기간 
 > **2022.09.04 ~ 2022.10.16**
 
 ## 평가 방법 
-  - 1차 심사 - 고객 당 대출 신청 여부 예측, 데이터 수집, 전처리 과정, 예측 모델 해석(필수)
-  - 2차 심사 - 제출한 예측모델 및 분석방법에 대한 발표
-
-## 대회 데이터셋
-
-> train.csv  
-- id : 샘플 아이디
-- Age : 나이
-- TypeofContact : 고객의 제품 인지 방법 (회사의 홍보 or 스스로 검색)
-- CityTier : 주거 중인 도시의 등급. (인구, 시설, 생활 수준 기준) (1등급 > 2등급 > 3등급)
-- DurationOfPitch : 영업 사원이 고객에게 제공하는 프레젠테이션 기간
-- Occupation : 직업
-- Gender : 성별
-- NumberOfPersonVisiting : 고객과 함께 여행을 계획 중인 총 인원
-- NumberOfFollowups : 영업 사원의 프레젠테이션 후 이루어진 후속 조치 수
-- ProductPitched : 영업 사원이 제시한 상품
-- PreferredPropertyStar : 선호 호텔 숙박업소 등급
-- MaritalStatus : 결혼여부
-- NumberOfTrips : 평균 연간 여행 횟수
-- Passport : 여권 보유 여부 (0: 없음, 1: 있음)
-- PitchSatisfactionScore : 영업 사원의 프레젠테이션 만족도
-- OwnCar : 자동차 보유 여부 (0: 없음, 1: 있음)
-- NumberOfChildrenVisiting : 함께 여행을 계획 중인 5세 미만의 어린이 수
-- Designation : (직업의) 직급
-- MonthlyIncome : 월 급여
-- ProdTaken : 여행 패키지 신청 여부 (0: 신청 안 함, 1: 신청함)
+  - 1차 심사 - 제출한 결과물을 바탕으로 교수님들이 평가를 진행
+  - 2차 심사 - 1차 심사 합격팀에 한해 응용통계인의 밤 행사에서 발표를 진행, 최종 심사 결과 발표 후 시상
 
 
+# PPT 목차
 
-> test.csv
-- id : 샘플 아이디
-- Age : 나이
-- TypeofContact : 고객의 제품 인지 방법 (회사의 홍보 or 스스로 검색)
-- CityTier : 주거 중인 도시의 등급. (인구, 시설, 생활 수준 기준) (1등급 > 2등급 > 3등급)
-- DurationOfPitch : 영업 사원이 고객에게 제공하는 프레젠테이션 기간
-- Occupation : 직업
-- Gender : 성별
-- NumberOfPersonVisiting : 고객과 함께 여행을 계획 중인 총 인원
-- NumberOfFollowups : 영업 사원의 프레젠테이션 후 이루어진 후속 조치 수
-- ProductPitched : 영업 사원이 제시한 상품
-- PreferredPropertyStar : 선호 호텔 숙박업소 등급
-- MaritalStatus : 결혼여부
-- NumberOfTrips : 평균 연간 여행 횟수
-- Passport : 여권 보유 여부 (0: 없음, 1: 있음)
-- PitchSatisfactionScore : 영업 사원의 프레젠테이션 만족도
-- OwnCar : 자동차 보유 여부 (0: 없음, 1: 있음)
-- NumberOfChildrenVisiting : 함께 여행을 계획 중인 5세 미만의 어린이 수
-- Designation : (직업의) 직급
-- MonthlyIncome : 월 급여
+### 1. introduction
 
-> sample_submission.csv
-- id : 샘플 아이디
-- ProdTaken : 여행 패키지 신청 여부 (0: 신청 안 함, 1: 신청함)
+- 선정 배경
+    - 기업이 마케팅 활동을 전개하는 데 있어 고객들의 상품 선택 행동에 대한 이해와 예측은 매우 필수적인 요소이다.
+    - 어떠한 특성을 가진 고객이 어떤 상품을 선택할 것인지를 이해하고 사전에 예측하는 능력은 고객별로 맞춤형 마케팅 프로그램을 제공하는 타깃 마케팅을 전개하는 데 있어 반드시 가져야 할 핵심적인 역량이기 때문이다.
+    - 오늘날의 기업들은 이른바 빅데이터 시대라고 불리는 경영 환경을 마주하고 있는데, 특히 마케팅 분야는 이러한 방대한 데이터들이 생성되고 활용되는 최전선에 있다고 해도 과언이 아닐 정도로 다양한 고객 관련 데이터들이 생성되고 있다.
+    - 이러한 흐름에 따라 우리는 보험사의 고객 데이터를 활용한 데이터 분석을 통해 고객 맞춤형 마케팅을 제안하고자 한다.
+- 분석 목표
+    - 기존 건강보험 가입자들 중 자동차 보험에 대해 긍정적으로 응답한 고객들에 대하여 가장 잘 예측할 수 있는 최적 모델 찾기
+    - 최적 모델에서 자동차 보험에 긍정적일 것으로 예측된 회원들의 특성에 가장 중요하게 영향을 미치는 변수를 찾아, 자동차 보험 판매 프로모션 방향성의 인사이트 찾기
+    - 군집분석을 통하여 군집별 특성을 확인한 후 비교함으로써 프로모션 방향성의 인사이트 찾기
+    - 모델링과 군집분석을 통한 자동차 보험 프로모션 방향성 제시
 
+### 2. Data Exploration
 
-# 3. Retrospect
+- 데이터 소개
+    - 불필요한 변수(id)삭제
+- 시각화
+    - target값 불균형 분포
+    - 수치형 변수들과 target값의 분포
+    - 범주형 변수들과 target값의 분포
+    - 상관관계 → 다중공선성 의심
+- 전처리
+    - 결측치 처리
+        - 결측치 존재 x
+    - 파생변수 생성
+    - 인코딩
+        - label 인코딩
+    - 이상치처리
+        - boxplot 시각화
+        - ‘Annual_Premium’ 칼럼 이상치 확인 후 이상치 대체
+    - 스케일링
+        - log 변환
 
+### 3. Modeling
 
-## 회고
-우선 머신러닝을 공부한지 얼마 안되어서 처음으로 진행중인 대회에 참가한 것이었기에 미숙한점이 매우 많다.  
-데이콘에서 진행하는 지난대회에 이어 다시 한 번 참가했다. 
-물론 머신러닝 초심자를 위한 Dacon Basic 대회이기에 상금도 없고 연습용 대회 느낌이었지만 머신러닝에 대해 아무것도 모르는 초보자의 입장에서는 참가하면서 배울게 많은 대회였던 것 같다.
+- 통계적 모델
+    - 로지스틱회귀 가설검정
+        - logistic regression을 선택한 이유
+        - 로지스틱 회귀 모델에 대한 가설 검정
+        - 개별 회귀 계수에 대한 가설 검정
+        - 변수선택법(단계선택법) step
+        
+        → anova에서도 vintage, 변수선택법(단계선택법)에서도 vintage이므로 vintage를 제거하는 것으로 결정
+        
+- 머신러닝 모델
+    - RandomForest, XGBoost, CatBoost 비교 → Catboost 선정
+    - CatBoost 모델의 다중공선성 처리 전후 비교
+    - CatBoost 모델의 불균형 처리 전후 비교 (class_weight 파라미터)
+    - Parameter Tuning -  (Bayesian Optimization)
+    - threshold 변경 → 변경에 대한 이유
+    - SHAP value를 통한 유의미한 변수 고찰
 
+### 4. Clustering
 
-- 마주쳤던 문제들
-    - 전처리 순서
-        - 결측치 살려서 인코딩 -> 로그변환 -> 이상치 처리 -> knn으로 결측치 처리 -> Age 범주 변환 -> Age_level 인코딩 순서로 전처리를 진행했다.
-        - 처음에는 전처리 순서에 크게 신경쓰지 않고 진행하다가 중간중간 이상한 점들을 발견해서 전처리 순서를 변경해주었다.
-        - 결정적으로 전처리 순서에 영향을 끼친 이유는 결측치 처리때문이었다.
-        - 본 대회는 제공되는 Test Data에도 결측치가 존재했기 때문에 결측치를 삭제하는 방법은 사용할 수 없었다.
-        - 따라서 결측치를 대체하는 방법을 사용했기에 결측치를 유지하면서 처리하는 과정이 중요했던 것 같다. (사실 이 부분은 경험부족으로 인해 애를 먹었던 것 같다. 돌이켜 생각해보면 당연하면서도 기본적인 내용..)
+- 군집화를 위한 추가 전처리
+    - 변수 선택
+    - one-hot 인코딩
+    - log 변환
+    - 시각화를 위한 PCA
+- K-means
+- 해석
 
+### 5. Conclusion
 
-    - OverSampling
-      - 클래스 불균형 문제를 해결하기 위해 여러가지 방법을 시도해보았다.
-      - 그 중 Oversampling 기법을 사용했었는데 성능 향상을 기록하지 못했다. 
-      - 처음에는 막연히 불균형 데이터이기 때문에 오버샘플링을 하면 성능이 향상될 것이라는 기대를 했다.
-      - 하지만 실제 해본 결과는 그렇지 않았다. 데이터의 분포에 따라 좋은 성능을 낼 수도, 성능이 떨어질 수도 있다는 점을 항상 인지해야겠다.
+- 결론
+    - 모델링
+        - → Previously_Insured, Vehicle_Damage, Age 가 중요한 변수로 판단
+    - 군집화
+        - → 0번 군집 : 20대가 90%이상 차지. 이 군집의 97%는 신청을 하지 않음.
+        - → 2,3번 군집 : 중장년층 위주로 분포. 기존의 Response 비율(16%)와 비교 했을 때 신청 비율이 2배 이상
+    
+      1.  차 보험에 대해 영향을 미치는 중요한 변수는 **‘연령/차 사고 경험/이전 보험 가입 여부’이며** 
+    
+     **특히 경제활동인구가 많은 27~54세 사이의 연령이 차 보험에 가장 긍정적일 확률이 높은 것으로 보아 이 연령층에 마케팅을 집중.**
+        
+    1. 20대가 차 보험에 부정적인 이유는 아직 필요성을 못느꼈기 때문이라고 판단. 따라서 차 보험의 필요성을 알리는 광고? 마케팅? 진행(하면 어떨까..)
+    2. 또한 **판매채널의 경우 채널별로 편차가 큰 것으로 보임. 26, 124, 163번 채널의 ‘핵심 연령층’에 마케팅을 집중. 상대적으로 낮은 반응을 보이는 판매채널에는 마케팅을 아주 적게 하거나 진행하지 않는 방법을 통해 비용을 줄임**
 
-    - KNNImputer 
-        - 이번 대회에서 결측치를 처리하면서 KNNImputer라는 것을 처음 알게 되었고, 사용해보았다.
-        - KNNImputer는 sklearn의 패키지 중 하나로, 결측치를 채우는 방법으로 실무에서도 많이 쓰인다는 방법이다.
-        - df.fillna(), df.interpolate 또는 SimpleImputer와 다르게 마땅히 결측치를 채울 방법이 떠오르지 않을 때 사용한다.
-        - KNN을 이용해 결측치들을 채우는 방식이 가장 성능이 좋았기에 채택했지만 약간의 찝찝한 부분이 남았다.
-        - KNN알고리즘의 전개 과정은 알지만 정확히 어떤 방식으로 결측치를 채우는 지에 대해서는 제대로 알 지 못했기 때문이다.
-        - 특정 결측치를 채울 때 모든 칼럼의 정보를 반영하는 것인지, 아니면 관련있는 몇 개의 칼럼들로만 반영되는 것인지 등에 대한 궁금점들이 남았다. 
+- 한계점
+    - 위 데이터에서는 판매채널에 대한 정보 및 판매정책들이 상세하게 나와있지 않기 때문에 좀 더 심층적인 마케팅 인사이트는 뽑을 수 없었습니다만, 실제 현업에서는 판매채널별/지역별 상세 정보 등을 추가로 분석해 더 뾰족한 마케팅 인사이트를 얻을 수 있을 것으로 판단
+    - 데이터의 한계로 인해 다양한 전처리 방법과 세밀한 군집화를 해보지 못함. 더욱 다양한 정보를 가진 데이터가 있었다면 더 정밀하고 효과적인 인사이트 도출이 가능했을거라 생각
